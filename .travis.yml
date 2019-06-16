@@ -22,5 +22,5 @@ deploy:
   on:
     branch: master
 after_deploy:
-  - echo "Updating import map to point to new version of @openmrs/navbar"
-  - curl -u $DEPLOYER_USERNAME:$DEPLOYER_PASSWORD -d '{ "service":"@openmrs/navbar","url":"https://spa-modules.nyc3.digitaloceanspaces.com/navbar/'$TRAVIS_COMMIT'/navbar.js" }' -X PATCH $DEPLOYER_HOST/services\?env=prod -H "Accept:application/json" -H "Content-Type:application/json" --fail
+  - echo "Updating import map to point to new version of @hackathon/navbar"
+  - curl -u $DEPLOYER_USERNAME:$DEPLOYER_PASSWORD -d '{ "service":"@hackathon/navbar","url":"https://spa-modules.nyc3.digitaloceanspaces.com/navbar/'$TRAVIS_COMMIT'/navbar.js" }' -X PATCH $DEPLOYER_HOST/services\?env=prod -H "Accept:application/json" -H "Content-Type:application/json" --fail
