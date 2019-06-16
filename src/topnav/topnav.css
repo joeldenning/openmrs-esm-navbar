@@ -1,0 +1,56 @@
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.18)
+}
+
+.topnav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topnav ul {
+  height: 100%;
+}
+
+.topnav ul li {
+  height: 100%;
+}
+
+.topnav ul li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  padding: 0 16px;
+  font-size: 18px;
+}
+
+.topnav ul li a:hover {
+  background-color: #DFDFDF;
+}
+
+.topnav ul li a:visited {
+  color: inherit;
+}
+
+.logoContainer {
+  padding-right: 16px;
+}
+
+.logoContainer img {
+  height: 40px;
+}
+
+.activeLink {
+  background-color: #F3F3F3;
+}
