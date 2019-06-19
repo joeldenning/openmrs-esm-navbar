@@ -5,13 +5,6 @@ import styles from "./topnav.css";
 export default function Topnav(props: TopnavProps) {
   return (
     <nav className={styles.topnav}>
-      <ul>
-        <li>
-          <NavLink to="/patient-search" activeClassName={styles.activeLink}>
-            <span>Patient search</span>
-          </NavLink>
-        </li>
-      </ul>
       <a
         href="https://openmrs.org"
         target="_blank"
@@ -22,6 +15,18 @@ export default function Topnav(props: TopnavProps) {
           alt="OpenMRS Logo"
         />
       </a>
+      <ul>
+        <li>
+          <NavLink to="/patient-search" activeClassName={styles.activeLink}>
+            <span>Patient Search</span>
+          </NavLink>
+        </li>
+        <li>
+          <a href="/openmrs/appui/header/logout.action?successUrl=openmrs">
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
     </nav>
   );
 }
