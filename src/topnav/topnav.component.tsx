@@ -1,17 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./topnav.css";
+import LoggedInUserDisplay from "./logged-in-user-display.component";
 
 export default function Topnav(props: TopnavProps) {
   return (
     <nav className={styles.topnav}>
-      <ul>
-        <li>
-          <NavLink to="/patient-search" activeClassName={styles.activeLink}>
-            <span>Patient search</span>
-          </NavLink>
-        </li>
-      </ul>
       <a
         href="https://openmrs.org"
         target="_blank"
@@ -22,8 +16,19 @@ export default function Topnav(props: TopnavProps) {
           alt="OpenMRS Logo"
         />
       </a>
+      <ul>
+        <li>
+          <NavLink to="/patient-search" activeClassName={styles.activeLink}>
+            <span>Patient search</span>
+          </NavLink>
+        </li>
+        <li>
+          <LoggedInUserDisplay />
+        </li>
+      </ul>
     </nav>
   );
 }
 
-type TopnavProps = {};
+type TopnavProps = {
+};
