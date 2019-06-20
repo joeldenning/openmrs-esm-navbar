@@ -25,6 +25,11 @@ export default function Topnav(props: TopnavProps) {
         <li>
           <LoggedInUserDisplay />
         </li>
+        <li>
+          <a href="/openmrs/appui/header/logout.action?successUrl=openmrs">
+            <span>Logout</span>
+          </a>
+        </li>
       </ul>
     </nav>
   );

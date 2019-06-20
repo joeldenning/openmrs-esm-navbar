@@ -22,7 +22,7 @@ export default function LoggedInUserDisplay(props: LoggedInUserDisplayProps) {
   }, []);
 
   return (
-    <a href="/">
+    <a href="/openmrs/spa">
       {currentSession && currentSession.user ? (
         <span>{currentSession.user.display}</span>
       ) : (
