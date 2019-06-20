@@ -8,7 +8,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.18)
+  box-shadow: 0 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.18);
+  padding-left: 16px;
+  z-index: 500;
 }
 
 .topnav ul {
