@@ -35,5 +35,4 @@ export default function Topnav(props: TopnavProps) {
   );
 }
 
-type TopnavProps = {
-};
+type TopnavProps = {};
