@@ -7,10 +7,10 @@
   background-color: white;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   box-shadow: 0 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.18);
   padding-left: 16px;
   z-index: 500;
+  align-items: top;
 }
 
 .topnav ul {
@@ -46,7 +46,8 @@
 }
 
 .logoContainer {
-  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 10px;
 }
 
 .logoContainer img {
@@ -60,4 +61,8 @@
 li {
 
   float: left;
+}
+
+.search {
+  float: right;
 }

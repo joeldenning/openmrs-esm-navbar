@@ -2,6 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./topnav.css";
 import LoggedInUserDisplay from "./logged-in-user-display.component";
+import Parcel from "single-spa-react/parcel";
+
+const patientSearch = System.import("@hackathon/patient-search").then(
+  patientSearchModule => {
+    return patientSearchModule.PatientSearchWidget;
+  }
+);
 
 export default function Topnav(props: TopnavProps) {
   return (
@@ -16,12 +23,10 @@ export default function Topnav(props: TopnavProps) {
           alt="OpenMRS Logo"
         />
       </a>
+      <div className={styles.search}>
+      <Parcel config={patientSearch} history={props.history} />
+      </div>
       <ul>
-        <li>
-          <NavLink to="/patient-search" activeClassName={styles.activeLink}>
-            <span>Patient search</span>
-          </NavLink>
-        </li>
         <li>
           <LoggedInUserDisplay />
         </li>
@@ -35,4 +40,8 @@ export default function Topnav(props: TopnavProps) {
   );
 }
 
-type TopnavProps = {};
+type TopnavProps = {
+  history?: {
+    push(newUrl: String): void;
+  };
+};
